@@ -8,6 +8,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-backend',
+    'name' => 'Mental Health',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
@@ -37,14 +38,20 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
+        'view' => array(
+            'theme' => array(
+                'pathMap' => array('@app/views' => '@app/themes/adminlte'),
+                'basePath' => '@app/themes/adminlte',
+                'baseUrl'   => '@web/themes/adminlte'
+            )
+        ),
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
     ],
     'params' => $params,
 ];

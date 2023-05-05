@@ -39,19 +39,6 @@ class m230503_052233_projectmigration extends Migration
             '{{%patient_info}}',
             'id'
         );
-		
-		$this->createTable('{{%user}}', [
-            'id' => $this->primaryKey(),
-            'username' => $this->string()->notNull()->unique(),
-            'auth_key' => $this->string(32)->notNull(),
-            'password_hash' => $this->string()->notNull(),
-            'password_reset_token' => $this->string()->unique(),
-            'email' => $this->string()->notNull()->unique(),
-
-            'status' => $this->smallInteger()->notNull()->defaultValue(10),
-            'created_at' => $this->integer()->notNull(),
-            'updated_at' => $this->integer()->notNull(),
-        ], $tableOptions);
 
 
         $this->createTable('{{%medical_record}}', [
@@ -140,7 +127,6 @@ class m230503_052233_projectmigration extends Migration
         $this->dropTable('{{%medical_record}}');
         $this->dropTable('{{%patient_info}}');
         $this->dropTable('{{%cms}}');
-        $this->dropTable('{{%user}}');
         $this->dropTable('{{%testimonial}}');
         $this->dropTable('{{%wellness_resource}}');
         $this->dropTable('{{%appointment}}');
