@@ -2,8 +2,8 @@
 
 namespace backend\widgets;
 
-use yii\bootstrap4\Alert as BootstrapAlert;
-use yii\bootstrap4\Widget;
+use yii\bootstrap5\Alert as BootstrapAlert;
+use yii\bootstrap5\Widget;
 
 /**
  * Alert widget renders a message from session flash for AdminLTE alerts. All flash messages are displayed

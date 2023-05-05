@@ -9,35 +9,36 @@
                     'options' => ['class' => 'nav nav-pills nav-sidebar flex-column', 'data-widget' => 'treeview'],
                     'items' => [
                         ['label' => 'Dashboard', 'iconType' => 'fas', 'icon' => 'tachometer-alt', 'url' => ['/site/index']],
+                        ['label' => 'CMS', 'iconType' => 'fas', 'icon' => 'list', 'url' => ['#']],
                         ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
-//                        [
-//                            'label' => 'Some tools',
-//                            'icon' => 'share',
-//                            'url' => '#',
-//                            'items' => [
-//                                ['label' => 'Gii', 'iconType' => 'far', 'icon' => 'file-code', 'url' => ['/'],],
-//                                ['label' => 'Debug', 'icon' => 'tachometer-alt', 'url' => ['/'],],
-//                                [
-//                                    'label' => 'Level One',
-//                                    'iconType' => 'far',
-//                                    'icon' => 'circle',
-//                                    'url' => '#',
-//                                    'items' => [
-//                                        ['label' => 'Level Two', 'iconType' => 'far', 'icon' => 'dot-circle', 'url' => '#',],
-//                                        [
-//                                            'label' => 'Level Two',
-//                                            'iconType' => 'far',
-//                                            'icon' => 'dot-circle',
-//                                            'url' => '#',
-//                                            'items' => [
-//                                                ['label' => 'Level Three', 'icon' => 'dot-circle', 'url' => '#',],
-//                                                ['label' => 'Level Three', 'icon' => 'dot-circle', 'url' => '#',],
-//                                            ],
-//                                        ],
-//                                    ],
-//                                ],
-//                            ],
-//                        ],
+                       [
+                           'label' => 'Some tools',
+                           'icon' => 'share',
+                           'url' => '#',
+                           'items' => [
+                               ['label' => 'Gii', 'iconType' => 'far', 'icon' => 'file-code', 'url' => ['/'],],
+                               ['label' => 'Debug', 'icon' => 'tachometer-alt', 'url' => ['/'],],
+                               [
+                                   'label' => 'Level One',
+                                   'iconType' => 'far',
+                                   'icon' => 'circle',
+                                   'url' => '#',
+                                   'items' => [
+                                       ['label' => 'Level Two', 'iconType' => 'far', 'icon' => 'dot-circle', 'url' => '#',],
+                                       [
+                                           'label' => 'Level Two',
+                                           'iconType' => 'far',
+                                           'icon' => 'dot-circle',
+                                           'url' => '#',
+                                           'items' => [
+                                               ['label' => 'Level Three', 'icon' => 'dot-circle', 'url' => '#',],
+                                               ['label' => 'Level Three', 'icon' => 'dot-circle', 'url' => '#',],
+                                           ],
+                                       ],
+                                   ],
+                               ],
+                           ],
+                       ],
                     ],
                 ]
             ) ?>
