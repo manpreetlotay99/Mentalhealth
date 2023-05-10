@@ -1,7 +1,8 @@
 <?php
 
 namespace common\models;
-
+use yii\base\Model;
+use yii\web\UploadedFile;
 use Yii;
 
 /**

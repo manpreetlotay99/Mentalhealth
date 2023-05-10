@@ -43,7 +43,29 @@ class PatientInfoController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
-
+    public function actionUpload() {
+        $base_path = Yii::getAlias('@app');
+        $web_path = Yii::getAlias('@web');
+        $model = new UploadForm();
+    
+        if (Yii::$app->request->isPost) {
+            $model->file = UploadedFile::getInstanceByName('file');
+    
+            if ($model->validate()) {
+                $model->file->saveAs($base_path . '/web/uploads/' . $model->file->baseName . '.' . $model->file->extension);
+            }
+        }
+    
+        // Get file link
+        $res = [
+            'link' => $web_path . '/uploads/' . $model->file->baseName . '.' . $model->file->extension,
+        ];
+    
+        // Response data
+        Yii::$app->response->format = Yii::$app->response->format = Response::FORMAT_JSON;
+        return $res;
+    }
+    
     /**
      * Displays a single PatientInfo model.
      * @param int $id ID

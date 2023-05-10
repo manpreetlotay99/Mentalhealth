@@ -1,7 +1,9 @@
 <?php
 
 use yii\helpers\Html;
-use yii\bootstrap5\ActiveForm;
+//use yii\bootstrap5\ActiveForm;
+use kartik\editors\Summernote;
+use kartik\form\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\cms */
@@ -16,8 +18,11 @@ use yii\bootstrap5\ActiveForm;
 
         <?= $form->field($model, 'url_key')->textInput(['maxlength' => true]) ?>
 
-        <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
-
+       
+        <?php echo $form->field($model, 'description')->widget(Summernote::class, [
+    'useKrajeePresets' => true,
+    // other widget settings
+]); ?>
         <?= $form->field($model, 'meta_title')->textInput(['maxlength' => true]) ?>
 
         <?= $form->field($model, 'meta_description')->textInput(['maxlength' => true]) ?>
