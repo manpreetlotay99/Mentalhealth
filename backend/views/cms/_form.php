@@ -21,6 +21,7 @@ use kartik\form\ActiveForm;
        
         <?php echo $form->field($model, 'description')->widget(Summernote::class, [
     'useKrajeePresets' => true,
+            'pluginOptions'=>['dialogsInBody' => true]
     // other widget settings
 ]); ?>
         <?= $form->field($model, 'meta_title')->textInput(['maxlength' => true]) ?>
