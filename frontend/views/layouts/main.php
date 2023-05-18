@@ -11,6 +11,7 @@ use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 
 AppAsset::register($this);
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/faviconn.ico')]);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -28,7 +29,7 @@ AppAsset::register($this);
 <header>
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
+        'brandLabel' => 'CampusCare',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
@@ -36,11 +37,31 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
+    }else{
+        $menuItems[]= ['label' => 'Medical Records', 'url' => ['/site/contact']];
+    }
+    if (Yii::$app->user->isGuest) {
+        $menuItems[] = ['label' => ''];
+    }else{
+        $menuItems[]= ['label' => 'Appointments', 'url' => ['/site/contact']];
+    }
+    if (Yii::$app->user->isGuest) {
+        $menuItems[] = ['label' => ''];
+    }else{
+        $menuItems[]= ['label' => 'Wellness Resources', 'url' => ['/site/contact']];
+    }
+    if (Yii::$app->user->isGuest) {
+        $menuItems[] = ['label' => ''];
+    }else{
+        $menuItems[]= ['label' => 'Feedback', 'url' => ['/site/contact']];
+    }
+    if (Yii::$app->user->isGuest) {
+        $menuItems[] = ['label' => ''];
+    }else{
+        $menuItems[]= ['label' => 'Personal Information', 'url' => ['/site/contact']];
     }
 
     echo Nav::widget([
@@ -50,9 +71,10 @@ AppAsset::register($this);
     if (Yii::$app->user->isGuest) {
         echo Html::tag('div',Html::a('Login',['/site/login'],['class' => ['btn btn-link login text-decoration-none']]),['class' => ['d-flex']]);
     } else {
+        
         echo Html::beginForm(['/site/logout'], 'post', ['class' => 'd-flex'])
             . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
+                'Logout',
                 ['class' => 'btn btn-link logout text-decoration-none']
             )
             . Html::endForm();
