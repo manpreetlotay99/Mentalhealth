@@ -9,7 +9,13 @@
                     'options' => ['class' => 'nav nav-pills nav-sidebar flex-column', 'data-widget' => 'treeview'],
                     'items' => [
                         ['label' => 'Dashboard', 'iconType' => 'fas', 'icon' => 'tachometer-alt', 'url' => ['/site/index']],
-                        ['label' => 'CMS', 'iconType' => 'fas', 'icon' => 'list', 'url' => ['#']],
+                        ['label' => 'CMS', 'iconType' => 'fas', 'icon' => 'list', 'url' => ['/cms']],
+                        ['label' => 'Wellness Resources', 'iconType' => 'fas', 'icon' => 'list', 'url' => ['/wellness-resource/index']],
+                        ['label' => 'Patient Info', 'iconType' => 'fas', 'icon' => 'list', 'url' => ['/patient-info']],
+                        ['label' => 'Appointments', 'iconType' => 'fas', 'icon' => 'list', 'url' => ['/appointment']],
+                        ['label' => 'Medical Records', 'iconType' => 'fas', 'icon' => 'list', 'url' => ['/medical-record']],
+                        ['label' => 'Testimonials', 'iconType' => 'fas', 'icon' => 'list', 'url' => ['/testimonial']],
+                        ['label' => 'Users', 'iconType' => 'fas', 'icon' => 'list', 'url' => ['/user']],
                         ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                        [
                            'label' => 'Some tools',

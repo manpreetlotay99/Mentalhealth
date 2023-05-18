@@ -49,9 +49,13 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
+            'rules' => [],
+        ],
+         'editor' => [
+                'class' => 'kartik\editors\Codemirror',
+                // configuration options
             ],
         ],
-    ],
+    
     'params' => $params,
 ];

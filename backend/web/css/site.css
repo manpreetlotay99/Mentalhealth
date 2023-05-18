@@ -88,3 +88,7 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+.form-control.kv-editor-container{
+    height: auto;
+    padding:0;
+}
