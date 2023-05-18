@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 $this->registerCssFile('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700');
 \backend\assets\AppAsset::register($this);
-
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/faviconn.ico')]);
 \backend\assets\AppAssetAdminlte::register($this);
 \backend\assets\FontAwesomeAsset::register($this);
 

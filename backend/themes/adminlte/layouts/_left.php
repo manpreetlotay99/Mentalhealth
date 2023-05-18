@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <?php // echo \yii\helpers\Html::a('<img class="brand-image img-circle elevation-3" src="' . ($directoryAsset . '/img/logo.png') . '" alt="APP"><span class="brand-text font-weight-light">' . Yii::$app->name . '</span>', Yii::$app->homeUrl, ['class' => 'brand-link']) ?>
-    <?= \yii\helpers\Html::a('<span class="brand-text font-weight-light">' . Yii::$app->name . '</span>', Yii::$app->homeUrl, ['class' => 'brand-link']) ?>
+    <?= \yii\helpers\Html::a('<span class="brand-text font-weight-light">' . 'CampusCare' . '</span>', Yii::$app->homeUrl, ['class' => 'brand-link']) ?>
     <div class="sidebar">
 
         <nav class="mt-2">
@@ -10,7 +10,7 @@
                     'items' => [
                         ['label' => 'Dashboard', 'iconType' => 'fas', 'icon' => 'tachometer-alt', 'url' => ['/site/index']],
                         ['label' => 'CMS', 'iconType' => 'fas', 'icon' => 'list', 'url' => ['/cms']],
-                        ['label' => 'Wellness Resources', 'iconType' => 'fas', 'icon' => 'list', 'url' => ['/wellness-resource/index']],
+                        //['label' => 'Wellness Resources', 'iconType' => 'fas', 'icon' => 'list', 'url' => ['/wellness-resource/index']],
                         ['label' => 'Patient Info', 'iconType' => 'fas', 'icon' => 'list', 'url' => ['/patient-info']],
                         ['label' => 'Appointments', 'iconType' => 'fas', 'icon' => 'list', 'url' => ['/appointment']],
                         ['label' => 'Medical Records', 'iconType' => 'fas', 'icon' => 'list', 'url' => ['/medical-record']],
