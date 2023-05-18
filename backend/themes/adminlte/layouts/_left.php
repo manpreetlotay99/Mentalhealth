@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <?php // echo \yii\helpers\Html::a('<img class="brand-image img-circle elevation-3" src="' . ($directoryAsset . '/img/logo.png') . '" alt="APP"><span class="brand-text font-weight-light">' . Yii::$app->name . '</span>', Yii::$app->homeUrl, ['class' => 'brand-link']) ?>
-    <?= \yii\helpers\Html::a('<span class="brand-text font-weight-light">' . 'CampusCare' . '</span>', Yii::$app->homeUrl, ['class' => 'brand-link']) ?>
+    <?= \yii\helpers\Html::a('<span class="brand-text font-weight-light">' . Yii::$app->name . '</span>', Yii::$app->homeUrl, ['class' => 'brand-link']) ?>
     <div class="sidebar">
 
         <nav class="mt-2">
