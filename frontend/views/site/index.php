@@ -2,7 +2,7 @@
 
 /** @var yii\web\View $this */
 
-$this->title = 'My Yii Application';
+$this->title = 'CampusCare';
 ?>
 <div class="site-index">
     <div class="p-5 mb-4 bg-transparent rounded-3">
